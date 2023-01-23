@@ -2,3 +2,12 @@ CREATE DATABASE DEVAPP;
 CREATE USER 'developer'@'localhost' IDENTIFIED BY '<PASSOWRD>';
 GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'developer'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
+USE DEVAPP;
+CREATE TABLE departments (
+    DEPT INT(4) UNSIGNED PRIMARY KEY,
+    DEPT_NAME VARCHAR(250) NOT NULL
+);
+INSERT INTO departments VALUE (1000, "Administration");
+INSERT INTO departments VALUE (2000, "Human Resources");
+INSERT INTO departments VALUE (3000, "Accounting");
+INSERT INTO departments VALUE (4000, "Research and Development");
